@@ -2,8 +2,11 @@ package com.huntercodexs.clientresttemplatedemo.service;
 
 import com.huntercodexs.clientresttemplatedemo.dto.request.UserRequestDto;
 import com.huntercodexs.clientresttemplatedemo.dto.response.UserResponseDto;
+import org.apache.http.client.HttpClient;
+import org.apache.http.impl.client.HttpClientBuilder;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.*;
+import org.springframework.http.client.HttpComponentsClientHttpRequestFactory;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
@@ -34,6 +37,11 @@ public class ClientService {
         httpHeaders.setContentType(MediaType.APPLICATION_JSON);
         httpHeaders.set("Authorization", remoteBasicAuth);
         return httpHeaders;
+    }
+
+    protected HttpComponentsClientHttpRequestFactory httpClientFactory() {
+        HttpClient httpClient = HttpClientBuilder.create().build();
+        return new HttpComponentsClientHttpRequestFactory(httpClient);
     }
 
     public ResponseEntity<UserResponseDto> findOne(String userid) {
@@ -106,6 +114,7 @@ public class ClientService {
         HttpEntity<UserRequestDto> httpEntity = new HttpEntity<>(user, httpRequestHeaders());
 
         try {
+            restTemplate.setRequestFactory(httpClientFactory());
             return restTemplate.exchange(urlPatchUser, HttpMethod.PATCH, httpEntity, UserResponseDto.class);
         } catch (RuntimeException re) {
             throw new RuntimeException("Error on patch user");

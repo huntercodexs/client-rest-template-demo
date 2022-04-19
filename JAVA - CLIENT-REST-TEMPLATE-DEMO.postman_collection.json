@@ -1,0 +1,226 @@
+{
+	"info": {
+		"_postman_id": "a3093683-b418-4fa1-8502-52619141da6a",
+		"name": "JAVA - CLIENT-REST-TEMPLATE-DEMO",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "FindOne",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic ZGFmOTg1NDNjNDg3YWY2Y2ViMjMwY2FlMDAyYzkyZmQ6ODk3OTRiNjIxYTMxM2JiNTllZWQwZDlmMGY0ZTgyMDU=",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:31700/huntercodexs/clientrestteplatedemo/api/users/123456",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "31700",
+					"path": [
+						"huntercodexs",
+						"clientrestteplatedemo",
+						"api",
+						"users",
+						"123456"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "FindAll",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic ZGFmOTg1NDNjNDg3YWY2Y2ViMjMwY2FlMDAyYzkyZmQ6ODk3OTRiNjIxYTMxM2JiNTllZWQwZDlmMGY0ZTgyMDU=",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:31700/huntercodexs/clientrestteplatedemo/api/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "31700",
+					"path": [
+						"huntercodexs",
+						"clientrestteplatedemo",
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic ZGFmOTg1NDNjNDg3YWY2Y2ViMjMwY2FlMDAyYzkyZmQ6ODk3OTRiNjIxYTMxM2JiNTllZWQwZDlmMGY0ZTgyMDU=",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Carlos Pereira\",\n    \"email\": \"carlos@email.com\",\n    \"phone\": \"1111111111111\",\n    \"address\": \"Rua do Carlos\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:31700/huntercodexs/clientrestteplatedemo/api/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "31700",
+					"path": [
+						"huntercodexs",
+						"clientrestteplatedemo",
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic ZGFmOTg1NDNjNDg3YWY2Y2ViMjMwY2FlMDAyYzkyZmQ6ODk3OTRiNjIxYTMxM2JiNTllZWQwZDlmMGY0ZTgyMDU=",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:31700/huntercodexs/clientrestteplatedemo/api/users/123456",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "31700",
+					"path": [
+						"huntercodexs",
+						"clientrestteplatedemo",
+						"api",
+						"users",
+						"123456"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic ZGFmOTg1NDNjNDg3YWY2Y2ViMjMwY2FlMDAyYzkyZmQ6ODk3OTRiNjIxYTMxM2JiNTllZWQwZDlmMGY0ZTgyMDU=",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Carlos Pereira\",\n    \"email\": \"carlos@email.com\",\n    \"phone\": \"2222222222222\",\n    \"address\": \"Rua do Carlos\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:31700/huntercodexs/clientrestteplatedemo/api/users/123456",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "31700",
+					"path": [
+						"huntercodexs",
+						"clientrestteplatedemo",
+						"api",
+						"users",
+						"123456"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Patcher",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic ZGFmOTg1NDNjNDg3YWY2Y2ViMjMwY2FlMDAyYzkyZmQ6ODk3OTRiNjIxYTMxM2JiNTllZWQwZDlmMGY0ZTgyMDU=",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"address\": \"Rua do Carlos Pereira\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:31700/huntercodexs/clientrestteplatedemo/api/users/123456",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "31700",
+					"path": [
+						"huntercodexs",
+						"clientrestteplatedemo",
+						"api",
+						"users",
+						"123456"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
